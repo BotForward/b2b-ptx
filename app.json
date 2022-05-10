@@ -5,7 +5,7 @@
         "forwarder",
         "userbot"
     ],
-    "repository": "https://github.com/BotForward/b2b-ptx",
+    "repository": "https://github.com/BotForward/b2b-ptx?organization=BotForward&organization=BotForward",
     "env": {
         "API_ID": {
             "description": "Get this value from my.telegram.org or @TeleORG_Bot"
