@@ -6,14 +6,14 @@ import heroku3
 
 class Config(object):
     # Get This From @TeleORG_Bot
-    API_ID = int(os.environ.get("18446044"))
-    API_HASH = os.environ.get("c1b4b6c77841e456c50520e990460d94")
+    API_ID = int(os.environ.get("API_ID"))
+    API_HASH = os.environ.get("API_HASH")
     # Get This From @StringSessionGen_Bot
-    STRING_SESSION = os.environ.get("1ApWapzMBuxhmORBeJSOPiawVupfg0sFCPkj4VCRmYVh8EWIl6gY1V0tWQjP4pqMy_uiTz5vfiBSYUzqZ4mqUDl4JtTt0Sml9LBQIVyGcFTfbA3o61BzGW41jORPYBa3JdGpd0inKny7FD_lWZYVi7wt1JGgReqa0iSQ0r6Rq8AcvPFIeMJNw5ABcq_WWDYQKp6pVQHEJ-kmmZYpZRo0WmKQqNfS8MKRwbgs8Ws8FFgEFzZ9CzFmTZL3-0rl-3Y5L9zwegEUiUHC9tJO4lADAtZ3SjQY5RxS5f5aIMK7ExpltfZwlsfHGTxI7wbqHQ2L4p1dXdvR1XhVkat_jUyLQTQD8BK5wXRI=")
+    STRING_SESSION = os.environ.get("STRING_SESSION")
     # Forward From Chat ID
-    FORWARD_FROM_CHAT_ID = list(set(int(x) for x in os.environ.get("5307340432 ", "-100").split()))
+    FORWARD_FROM_CHAT_ID = list(set(int(x) for x in os.environ.get("FORWARD_FROM_CHAT_ID ", "-100").split()))
     # Forward To Chat ID
-    FORWARD_TO_CHAT_ID = list(set(int(x) for x in os.environ.get("5379943214", "-100").split()))
+    FORWARD_TO_CHAT_ID = list(set(int(x) for x in os.environ.get("FORWARD_TO_CHAT_ID", "-100").split()))
     # Filters for Forwards
     DEFAULT_FILTERS = "video document photo audio text gif forwarded poll sticker"
     FORWARD_FILTERS = list(set(x for x in os.environ.get("FORWARD_FILTERS", DEFAULT_FILTERS).split()))
@@ -25,8 +25,8 @@ class Config(object):
     # Sleep Time while Kang
     SLEEP_TIME = int(os.environ.get("SLEEP_TIME", 10))
     # Heroku Management
-    HEROKU_API_KEY = os.environ.get("f0fe9ede-79ce-478d-aea9-298a21953b95")
-    HEROKU_APP_NAME = os.environ.get("b2b-forward-peyzen")
+    HEROKU_API_KEY = os.environ.get("HEROKU_API_KEY")
+    HEROKU_APP_NAME = os.environ.get("HEROKU_APP_NAME")
     HEROKU_APP = heroku3.from_key(HEROKU_API_KEY).apps()[HEROKU_APP_NAME] if HEROKU_API_KEY and HEROKU_APP_NAME else None
     # Message Texts
     HELP_TEXT = """
